@@ -1,4 +1,3 @@
-// ContentView.swift
 // SimpleChat
 
 import SwiftUI
@@ -10,31 +9,54 @@ struct ContentView: View {
   
   var body: some View {
     NavigationView {
-      VStack {
-        // Afficher tous les messages
-        ScrollView {
-          ForEach(messages, id: \.self) { message in
-            Text(message)
-              .padding()
+      GeometryReader { geometry in // Accéder à la taille de l'écran
+        ZStack {
+          // Image en fond plein couvrant tout l'écran
+          Image("background")
+            .resizable()
+            .scaledToFill() // Couvrir tout l'écran en conservant le ratio
+            .ignoresSafeArea() // Ignorer les marges de sécurité
+            .frame(width: geometry.size.width, height: geometry.size.height) // Fixer la taille à l'écran
+          
+          VStack(spacing: 1) { // Espacer les éléments verticalement
+            Spacer() // Pousser le contenu vers le bas
+            
+            // Zone de saisie et bouton d'envoi
+            HStack(spacing: 10) { // Espacer les éléments horizontalement
+              TextField("Entrez votre message", text: $messageText) { _ in
+                // Envoyer le message
+                sendMessage()
+              }
+              .foregroundColor(.white) // Curseur blanc
+              .background(
+                RoundedRectangle(cornerRadius: 10)
+                  .fill(.gray.opacity(0.5))
+              )
+              .padding(.horizontal) // Ajouter un padding horizontal
+              
+              Button("Envoyer") {
+                // Envoyer le message
+                sendMessage()
+                // Effacer le message après l'envoi (optionnel)
+                messageText = ""
+              }
+              .foregroundColor(.white)
+              .background(
+                RoundedRectangle(cornerRadius: 3)
+                  .fill(.blue)
+              )
+              .padding(.horizontal) // Ajouter un padding horizontal
+              .frame(height: 1) // Fixer la hauteur du bouton
+            }
+           
+          
           }
+          .padding() // Ajouter un padding général
+          .frame(maxWidth: .infinity) // Prendre la largeur maximale disponible
         }
-        
-        // Zone de saisie et bouton d'envoi
-        HStack {
-          TextField("Entrez votre message", text: $messageText) { _ in
-            // Envoyer le message
-            sendMessage()
-          }
-          Button("Envoyer") {
-            // Envoyer le message
-            sendMessage()
-            // Effacer le message après l'envoi (optionnel)
-            messageText = ""
-          }
-        }
-        .padding()
       }
-      .navigationBarTitle("DALM|CHAT")
+      .navigationBarTitle("DALM|CHAT", displayMode: .inline)
+      .font(.caption)
     }
   }
   

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,14 +11,16 @@
 		9871ED7A2BC8D0B9009A92ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9871ED792BC8D0B9009A92ED /* ContentView.swift */; };
 		9871ED7C2BC8D0BA009A92ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9871ED7B2BC8D0BA009A92ED /* Assets.xcassets */; };
 		9871ED7F2BC8D0BA009A92ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9871ED7E2BC8D0BA009A92ED /* Preview Assets.xcassets */; };
+		9871ED872BC8D605009A92ED /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 9871ED862BC8D605009A92ED /* Algorithms */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9871ED742BC8D0B9009A92ED /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9871ED742BC8D0B9009A92ED /* DALM|CHAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DALM|CHAT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9871ED772BC8D0B9009A92ED /* SimpleChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleChatApp.swift; sourceTree = "<group>"; };
 		9871ED792BC8D0B9009A92ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9871ED7B2BC8D0BA009A92ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9871ED7E2BC8D0BA009A92ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9871ED902BC8D977009A92ED /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9871ED872BC8D605009A92ED /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +46,7 @@
 		9871ED752BC8D0B9009A92ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9871ED742BC8D0B9009A92ED /* SimpleChat.app */,
+				9871ED742BC8D0B9009A92ED /* DALM|CHAT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +57,7 @@
 				9871ED772BC8D0B9009A92ED /* SimpleChatApp.swift */,
 				9871ED792BC8D0B9009A92ED /* ContentView.swift */,
 				9871ED7B2BC8D0BA009A92ED /* Assets.xcassets */,
+				9871ED902BC8D977009A92ED /* background.png */,
 				9871ED7D2BC8D0BA009A92ED /* Preview Content */,
 			);
 			path = SimpleChat;
@@ -70,9 +74,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9871ED732BC8D0B9009A92ED /* SimpleChat */ = {
+		9871ED732BC8D0B9009A92ED /* DALM|CHAT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9871ED822BC8D0BA009A92ED /* Build configuration list for PBXNativeTarget "SimpleChat" */;
+			buildConfigurationList = 9871ED822BC8D0BA009A92ED /* Build configuration list for PBXNativeTarget "DALM|CHAT" */;
 			buildPhases = (
 				9871ED702BC8D0B9009A92ED /* Sources */,
 				9871ED712BC8D0B9009A92ED /* Frameworks */,
@@ -82,9 +86,12 @@
 			);
 			dependencies = (
 			);
-			name = SimpleChat;
+			name = "DALM|CHAT";
+			packageProductDependencies = (
+				9871ED862BC8D605009A92ED /* Algorithms */,
+			);
 			productName = SimpleChat;
-			productReference = 9871ED742BC8D0B9009A92ED /* SimpleChat.app */;
+			productReference = 9871ED742BC8D0B9009A92ED /* DALM|CHAT.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,11 +118,17 @@
 				Base,
 			);
 			mainGroup = 9871ED6B2BC8D0B9009A92ED;
+			packageReferences = (
+				9871ED852BC8D605009A92ED /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				9871ED882BC8D627009A92ED /* XCRemoteSwiftPackageReference "swift-nio" */,
+				9871ED922BC8DCCD009A92ED /* XCLocalSwiftPackageReference "../CocoaAsyncSocket" */,
+				9871ED952BC8E1CB009A92ED /* XCLocalSwiftPackageReference "../../../../Downloads/Starscream-4.0.8" */,
+			);
 			productRefGroup = 9871ED752BC8D0B9009A92ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9871ED732BC8D0B9009A92ED /* SimpleChat */,
+				9871ED732BC8D0B9009A92ED /* DALM|CHAT */,
 			);
 		};
 /* End PBXProject section */
@@ -334,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9871ED822BC8D0BA009A92ED /* Build configuration list for PBXNativeTarget "SimpleChat" */ = {
+		9871ED822BC8D0BA009A92ED /* Build configuration list for PBXNativeTarget "DALM|CHAT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9871ED832BC8D0BA009A92ED /* Debug */,
@@ -344,6 +357,44 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		9871ED922BC8DCCD009A92ED /* XCLocalSwiftPackageReference "../CocoaAsyncSocket" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../CocoaAsyncSocket;
+		};
+		9871ED952BC8E1CB009A92ED /* XCLocalSwiftPackageReference "../../../../Downloads/Starscream-4.0.8" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../../../Downloads/Starscream-4.0.8";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9871ED852BC8D605009A92ED /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		9871ED882BC8D627009A92ED /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.64.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9871ED862BC8D605009A92ED /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9871ED852BC8D605009A92ED /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9871ED6C2BC8D0B9009A92ED /* Project object */;
 }

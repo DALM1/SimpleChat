@@ -1,0 +1,4 @@
+platform :ios, '15.0'
+
+pod 'SwiftSocket', '~> 2.0'  
+pod 'Starscream'
